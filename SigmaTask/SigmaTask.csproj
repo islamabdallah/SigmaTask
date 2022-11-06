@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DataStorage\PostgreSQL\" />
+    <Folder Include="DataStorage\SqlServer\" />
+    <Folder Include="wwwroot\Files\Candidates\" />
+  </ItemGroup>
+
 </Project>
