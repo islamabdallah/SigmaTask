@@ -10,4 +10,8 @@
     <Folder Include="wwwroot\Files\Candidates\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="30.0.0" />
+  </ItemGroup>
+
 </Project>
