@@ -34,7 +34,7 @@ namespace SigmaTask.DataStorage.CSV
         {
             if (candidate != null)
             {
-                var _candidates = ReadCSV<Candidate>().ToList();
+                var _candidates = CandidateList<Candidate>().ToList();
                 var _candidateExist = _candidates.Where(r => r.Email.Contains(candidate.Email)).FirstOrDefault();
 
                 //Case #1 Candidate Exist (Update Operation)
