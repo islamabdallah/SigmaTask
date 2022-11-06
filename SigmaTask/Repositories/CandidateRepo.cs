@@ -1,23 +1,26 @@
-﻿using SigmaTask.Models;
+﻿using SigmaTask.DataStorage.CSV;
+using SigmaTask.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SigmaTask.Repositories
 {
     public class CandidateRepo : ICandidateRepo
     {
-        public List<Candidate> CandidateList()
+        private readonly ICSVService CSVService;
+        public CandidateRepo(ICSVService csvService)
         {
-            throw new System.NotImplementedException();
+            CSVService = csvService;    
         }
 
-        public Candidate GetCandidate(string email)
+        public List<Candidate> CandidateList()
         {
-            throw new System.NotImplementedException();
+            return CSVService.CandidateList<Candidate>().ToList();
         }
 
         public Candidate SaveCandidate(Candidate candidate)
         {
-            throw new System.NotImplementedException();
+            return CSVService.SaveCandidate(candidate);
         }
     }
 }
